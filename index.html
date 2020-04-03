@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Parallelism by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DRONE Experiment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Items -->
+							<div class="items">
+
+								<div class="item intro span-2">
+									<h1>DRONE</h1>
+									<p>An experiment</p><br>
+                                    <button type="button" disabled id="pause" onclick="click_this()">play</button>
+								</div>
+
+								<article class="item thumb span-1">
+									<h2>Drone dur</h2>
+									<label id="drone_duration_label" for="drone_duration">drone duration:</label><br>
+                                    <input type="range" name="drone_duration" id="drone_duration" step="10" value="60" min="10" max="180" onclick="droneduration()">
+                                    <input type="text" id="drone_duration_value" value="60">
+								</article>
+
+								<article class="item thumb span-1">
+									<h2>Noise Synth</h2>
+                                    <button type="button" id="noisesynthOn" onclick="noisesynthOn()">ON</button><br>
+                                    <label id="volumeNoisesynth_label" for="volumeNoisesynth">volume</label><br>
+                                    <input type="range" name="volume" id="volumeNoisesynth" step="1" value="8" min="0" max="10" onchange="volumeNoisesynth()">
+                                    <input type="text" id="volumeNoisesynth_value" value="8">
+                                </article>
+
+							</div>
+
+						<!-- Items -->
+							<div class="items">
+
+								<article class="item thumb span-1">
+									<h2>Synth</h2>
+                                    <button type="button" id="synthOn" onclick="synthOn()">ON</button><br>
+                                    </label>
+                                    <label id="volumeSynth_label" for="volumeSynth">volume</label><br>
+                                    <input type="range" name="volume" id="volumeSynth" step="1" value="8" min="0" max="10" onchange="volumeSynth()">
+                                    <input type="text" id="volumeSynth_value" value="8"><br>
+                                    <label id="reverbLevelSynth_label" for="reverbLevelSynth">rev level</label><br>
+                                    <input type="range" name="rev_level" id="reverbLevelSynth" step="1" value="5" min="0" max="10" onchange="reverbLevelSynth()">
+                                    <input type="text" id="reverbLevelSynth_value" value="5">
+								</article>
+
+								<article class="item thumb span-3">
+									<!--<h2>Console</h2>-->
+                                    <textarea class="console" id="console">Csound: not loaded</textarea>
+								</article>
+
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<section>
+							<p>This is <strong>Parallelism</strong>, a responsive portfolio site template by <a href="http://html5up.net">HTML5 UP</a>. Free for personal
+							and commercial use under the <a href="http://html5up.net/license">Creative Commons Attribution</a> license.</p>
+						</section>
+						<section>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script src="js/csound.js"></script>
+			<script src="drone.js"></script>
+
+    </body>
+</html>
